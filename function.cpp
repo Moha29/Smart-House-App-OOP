@@ -17,7 +17,7 @@ int app::add_room(char uroom[])
 		head -> data -> room_n = new char(strlen(uroom) + 1);
 		strcpy(head -> data -> room_n,uroom);
 		head -> next = NULL;
-		cout<<head->data->room_n;
+    cout<<"\tRoom number #"<<head -> data -> room_n<<" is added!";
 		return 1;
 	}
 	//Check if a room already exist
@@ -37,6 +37,7 @@ int app::add_room(char uroom[])
 	strcpy(temp -> data -> room_n,uroom);
 	temp -> next = NULL;
 	current -> next = temp;
+  cout<<"\tRoom number #"<<temp -> data -> room_n<<" is added!";
 
 
 	return 1;
